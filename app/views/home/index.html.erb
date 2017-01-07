@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <%=stylesheet_link_tag "application", media: "screen" %>
+
+    <title>What's my speed?</title>
+  </head>
+  <body>
+
+  <!-- Navbar -->
+         <div class="navbar navbar-default navbar-fixed-top">
+           <div class="container">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+             </button>
+
+             <a class="navbar-brand text-muted" href="#">Dude What's My Speed?</a>
+             <div class="collapse navbar-collapse">
+
+               <ul class="nav navbar-nav navbar-right">
+                 <li><a href="#">Log In</a></li>
+
+                 <li class="dropdown">
+                   <a data-toggle="dropdown" data-target="#">Home<b class="caret">
+                   </b></a>
+                   <ul class="dropdown-menu">
+                     <li><a href="#">Who</a></li>
+                     <li><a href="#">What</a></li>
+                     <li><a href="#">Where</a></li>
+                     <li class="divider"></li>
+                     <li><a href="#">Use RasberryPi to Track Internet Speeds</a></li>
+                   </ul>
+                 </li>
+               </ul>
+
+             </div>
+           </div>
+         </div> <!-- End navbar -->
+
+
+
+     <%=javascript_include_tag "application" %>
+  </body>
+</html>
