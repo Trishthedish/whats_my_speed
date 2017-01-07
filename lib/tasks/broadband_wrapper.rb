@@ -6,14 +6,14 @@ require 'awesome_print'
 # sSPEED_TEST_TYPE: specify the speed test type among any,ookla,mlab with default being any
 
 class Broadband_Wrapper
-  BASE_URL = "https://www.broadbandmap.gov/broadbandmap/"
+  BASE_URL = "https://www.broadbandmap.gov/broadbandmap/speedtest"
   GEOGRAPHY_TYPE = "state"
   # temporary thing that you will be able to search for.
   # GEOGRAPHY_IDS = "01,02,03"
   FORMAT = "json"
 
   def self.search_broadband(search_term)
-    url = BASE_URL + "speedtest" +  "#{GEOGRAPHY_TYPE}" + "ids" + "#{search_term}?"+ "&format=#{FORMAT}"
+    url = BASE_URL +  "#{GEOGRAPHY_TYPE}" + "ids" + "#{search_term}?"+ "&format=#{FORMAT}"
 
     data = HTTParty.get(url)
     search_results = []
@@ -24,6 +24,7 @@ class Broadband_Wrapper
     end
     search_results
   end
+
 
 
   def self.build_data(result)

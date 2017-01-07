@@ -40,10 +40,20 @@
            </div>
          </div> <!-- End navbar -->
 
+          <div class="col-sm-10">
+            <h3>Find Your ISP Speeds</h3>
+              <%= form_tag(search_broadband_path(), :method => "get") do %>
+                <%= search_field_tag("query", nil, :placeholder => "search broadband") %>
+                <%= submit_tag "Submit", :name => nil, class: "button" %>
+              <% end %>
+          </div>
 
-         <div>
-         <p>&copy; 2017 DudeWhatsMySpeed? - By Trish Griego</p>
-       </div>
+         <footer class="footer">
+           <div class="container">
+             <p class="text-muted">&copy; 2017 DudeWhatsMySpeed? - By Trish Griego
+           </p>
+           </div>
+         </footer>
      <%=javascript_include_tag "application" %>
   </body>
 </html>
